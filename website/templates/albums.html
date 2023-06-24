@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='albums.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='static/images/icons/logo.png') }}" type="image/x-icon">
+    <title>Pakify | Albums</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="{{ url_for('views.index') }}"><h1>PAKIFY</h1></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                <button>
+                    <a href="{{ url_for('auth.signup') }}">Sign Up</a>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <section>
+            <section class="playlists">
+                <div class="playlist">
+                    <div class="playlist-title">
+                        <div>
+                            <h2> One Direction </h2>
+                        </div>
+                    </div>
+                    <div class="playlist-cards">
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/onedirection/four.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/onedirection/miam.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/onedirection/midnight.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/onedirection/tmh.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/onedirection/uan.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-title">
+                        <div>
+                            <h2> The Beatles </h2>
+                        </div>
+                    </div>
+                    <div class="playlist-cards">
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/taylorswift/1989.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/taylorswift/folklore.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/taylorswift/speaknow.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/taylorswift/red.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/taylorswift/reputation.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-title">
+                        <div>
+                            <h2> The Weeknd </h2>
+                        </div>
+                    </div>
+                    <div class="playlist-cards">
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/thebeatles/bfs.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/thebeatles/yellow.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/thebeatles/r&b.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/thebeatles/ppm.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/thebeatles/magical.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-title">
+                        <div>
+                            <h2> Pakify Playlists </h2>
+                        </div>
+                    </div>
+                    <div class="playlist-cards">
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/theweeknd/afterhours.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/theweeknd/dawnfm.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/theweeknd/heartless.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/theweeknd/kissland.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-img">
+                                <img src="{{ url_for ('static', filename='images/albums/theweeknd/starboy.jpg') }}" alt="" class="cardimg">
+                                <img src="{{ url_for ('static', filename='images/icons/icons8-play-50.png') }}" alt="" class="playbtn hidden">
+                            </div>
+                            <div class="playlist-disc">
+                                <h3>Peaceful Piano</h3>
+                                <br>
+                                <p>Peaceful piano to help you slow down, breathe, and relax.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <aside>
+            <div class="sider">
+                <ul>
+                    <li><a href="{{ url_for('views.index') }}">Home</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="{{ url_for('views.albums') }}">Recent</a></li>
+                    <li><a href="playlists.html">Playlists</a></li>
+                    <li><a href="{{ url_for('auth.login') }}">Search</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="rows">
+            <div class="row-1">
+                <h3>Company</h3>
+                <br>
+                <ul>
+                    <li><a href="">Legal</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Support</a></li>
+                </ul>
+            </div>
+            <div class="row-2">
+                <h3>Community</h3>
+                <br>
+                <ul>
+                    <li><a href="">Developers</a></li>
+                    <li><a href="">Artists</a></li>
+                    <li><a href="">Working</a></li>
+                    <li><a href="">Designers</a></li>
+                    <li><a href="">Producers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="links">
+            <div class="social1">
+                <div>
+                    <ul>
+                        <li><a href="{{ url_for('views.index') }}">HOME</a></li>
+                        <li><a href="recent.html">RELEASES</a></li>
+                        <li><a href="{{ url_for('views.albums') }}">ALBUMS</a></li>
+                        <li><a href="playlists.html">PLAYLISTS</a></li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <p>© COPYRIGHT 2023 PAKIFY MUSIC ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="social2">
+                <img src="{{ url_for ('static', filename='images/icons/facebook.png') }}" alt="">
+                <img src="{{ url_for ('static', filename='images/icons/instagram.png') }}" alt="">
+                <img src="{{ url_for ('static', filename='images/icons/twitter.png') }}" alt="">
+                <img src="{{ url_for ('static', filename='images/icons/website.png') }}" alt="">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

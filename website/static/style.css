@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/*------------------------------------------------ Constants ----------------------------------------------------*/
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6200;
+}
+
+button {
+    width: 30vh;
+    height: 5vh;
+    background-color: silver;
+    color: #262625;
+    border-radius: 5px;
+    border: 0.1px solid silver;
+}
+
+.empty {
+    background-color: transparent;
+    border: 0.1px solid white;
+    border-radius: 20px;
+}
+
+.empty>a:hover{
+    color: white;
+}
+
+button:hover {
+    background-color: #ff6200;
+    border: 0.1px solid #ff6200;
+    color: #262625;
+    transition: 0.2s ease-in;
+}
+
+/*------------------------------------------------ Navigation Bar ----------------------------------------------------*/
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #262625;
+}
+
+.logo {
+    width: 30%;
+    margin: 20px;
+    margin-left: 10%;
+    background-color: #262625;
+}
+
+.menu {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 10%;
+    background-color: #262625;
+}
+
+.menu > ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 10px;
+    background-color: #262625;
+}
+
+.menu > ul > li {
+    width: 120px;
+    margin: 2%;
+    padding-left: 10px;
+    border-right: 0.5px solid silver;
+}
+
+.menu>ul>li>a:hover {
+    color: #ff6200;
+    transition: 0.1s ease-in;
+    border-bottom: 1px solid #ff6200;
+}
+
+/*------------------------------------------------ Header Area ----------------------------------------------------*/
+
+header {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(38, 38, 37, 0.7)), url(images/top.jpg);
+    background-size: cover;
+}
+
+.one {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.data {
+    width: 70%;
+    text-align: justify;
+    margin-left: 10%;
+    padding: 50px;
+    border-bottom: 1px solid silver;
+}
+
+@keyframes onLoadh1 {
+    0% {
+        opacity: 0;
+        position: relative;
+        transform: translateX(150px);
+        transition: all 1s ease;
+  }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.data > h1 {
+    font-size: 4em;
+    animation: on Loadh1 1.5s ease-in;
+}
+
+.data > h5 {
+    font-size: medium;
+    animation: onLoadh5 1.5s ease-in;
+}
+
+@keyframes onLoadh5 {
+    0% {
+        opacity: 0;
+        position: relative;
+        transform: translateY(150px);
+        transition: all 1s ease;
+  }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.player {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+}
+
+.player-img {
+    width: 20%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.player-img > img {
+    width: 90%;
+    height: 95%;
+}
+
+.player-data {
+    width: 20%;
+    margin-left: 4%;
+}
+
+.player-icons {
+    width: 100%;
+}
+
+.player-icons > img {
+    margin: 20px;
+}
+
+.player-audio {
+    width: 60%;
+    height: 50%;
+    background: transparent;
+    margin-right: 12%;
+}
+
+#audioPlayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+  }
+
+#audioPlayer button {
+    border: none;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    width: 10%;
+  }
+
+#seekSlider {
+    position: relative;
+    width: 50%;
+    height: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #ddd;
+  }
+
+#fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #000;
+}
+
+#handle {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+#timeDisplay {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+/*------------------------------------------------ Main Area ----------------------------------------------------*/
+
+main {
+    width: 100%;
+    height: 315vh;
+    background: #262625;
+}
+
+.top {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+
+.top-info {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-info>button {
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.top-cards {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8%;
+}
+
+.card {
+    width: 33%;
+    height: 75%;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.card-img {
+    width: 95%;
+}
+
+.card-img > img {
+    width: 100%;
+    height: 90%;
+}
+
+.card-data > h5 {
+    color: #ff6200;
+}
+
+.card-data > p {
+    color: silver;
+}
+
+.album {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.2), rgba(38, 38, 37, 1)), url(images/oak.jpg);
+}
+
+.first {
+    width: 50%;
+    text-align: justify;
+    align-content: center;
+    padding: 5%;
+    margin: 5%;
+}
+
+.first > img {
+    width: 90%;
+    height: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.second {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    flex-direction: column;
+}
+
+.song {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid silver;
+    margin-right: 4em;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.song:hover {
+    background-color: silver;
+}
+
+.play {
+    display: flex;
+}
+
+.a {
+    display: flex;
+}
+
+.play > div > img {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.duration {
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+    color: silver;
+}
+
+.playlists {
+    width: 100%;
+    height: 130vh;
+    background-color: #262625;
+}
+
+.playlist {
+    width: 100%;
+    height: 50%;
+}
+
+.playlist-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playlist-title > div {
+    width: 50%;
+}
+
+.playlist-title > div > h2 {
+    margin-left: 5%;
+}
+
+.playlist-title > div > button {
+    width: 20%;
+    height: 5%;
+    color: silver;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0px;
+    margin-right: 10px;
+}
+
+.btndiv {
+    width: 20%;
+}
+
+.playlist-title>div>button:hover {
+    border-bottom: 0.1px solid white;
+    color: white;
+}
+
+.playlist-cards {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.playlist-card {
+    width: 95%;
+    height: 85%;
+    background-color: black;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.playlist-card:hover {
+    transition: 0.1s ease-in;
+    transform: scale(1.05);
+    background-color: #3d3d3b;
+}
+
+.playlist-img {
+    width: 95%;
+    height: 65%;
+    position: relative;
+}
+
+.cardimg {
+    width: 100%;
+    height: 99%;
+    border-radius: 8px;
+    z-index: 1;
+    position: absolute;
+}
+
+.playbtn {
+    width: 27%;
+    height: 30%;
+    z-index: 2;
+    position: absolute;
+    top: 55%;
+    left: 68%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.playlist-card:hover .hidden{
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.playlist-disc {
+    text-align: justify;
+}
+
+/*------------------------------------------------ Footer Area ----------------------------------------------------*/
+
+footer {
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter {
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(255, 98, 0, 0.73)), url(images/edwin-andrade-6liebVeAfrY-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe > h1 {
+    font-size: 40px;
+}
+
+.email {
+    width: 50%;
+}
+
+.email > form > input {
+    background: transparent;
+    border: 0px;
+    border-bottom: 0.4px solid white;
+    width: 50%;
+    height: 5vh;
+    color: white;
+    margin: 30px;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.email > form > button {
+    background: transparent;
+    border-radius: 20px;
+    border: 0.5px solid white;
+    color: white;
+}
+
+.email>form>button:hover {
+    background: #ff6200;
+    border: 0.5px solid #ff6200;
+}
+
+.rows {
+    background-color: black;
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row-1 > ul > li {
+    margin: 7px;
+    padding: 7px;
+}
+
+.row-2 > ul > li {
+    margin: 7px;
+    padding: 7px;
+}
+
+.row-3 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row-3-card {
+    width: 55%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.row-3-div {
+    width: 30%;
+    height: 90%;
+}
+
+.row-3-div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.row-3-card:hover {
+    scale: 1.1;
+    transform: translate(300);
+}
+
+.row-3 > button {
+    color: white;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.links {
+    background-color: #262625;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 0.5px solid silver;
+}
+
+.social1 > div > ul {
+    display: inline-flex;
+}
+
+.social1 > div > ul > li {
+    margin-right: 20px;
+    padding-right: 17px;
+    border-right: 0.1px solid silver;
+}
+
+.social2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social2 > img {
+    padding: 20px;
+}

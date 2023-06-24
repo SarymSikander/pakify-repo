@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='signup.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icons/logo.png') }}" type="image/x-icon">
+    <title>Pakify | Music</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="{{ url_for('views.index') }}"><h1>PAKIFY</h1></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('views.index') }}">Home</a></li>
+                <li><a href="">Artists</a></li>
+                <li><a href="{{ url_for('views.albums') }}">Albums</a></li>
+                <li><a href="">Playlists</a></li>
+                <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="form">
+            <div>
+                <h1>Sign up to Pakify for free.</h1>
+                <br>
+            </div>
+            <form action="" method="post">
+                <div>
+                    <label for="email">Enter Email Address</label>
+                    <br>
+                    <input type="text" placeholder="Email Address" id="email" name="email">
+                    <br> <br>
+                    <label for="password">Create a Password</label>
+                    <br>
+                    <input type="password" placeholder="Password" id="password" name="password">
+                    <br> <br>
+                    <label for="username">Choose a Username</label>
+                    <br>
+                    <input type="text" placeholder="Username" id="username" name="username">
+                    <br> <br>
+                    <label for="dob">Date of Birth</label>
+                    <br>
+                    <input type="date" name=dob"" id="dob">
+                    <br> <br>
+                    <label for="gender">Choose a Gender</label>
+                    <br>
+                    <div>
+                        <label for="gender">Male</label>
+                        <input type="radio" name="Male" id="gender">
+                        <label for="gender">Female</label>
+                        <input type="radio" name="Female" id="gender">
+                        <label for="gender">Prefer not to say</label>
+                        <input type="radio" name="Others" id="gender">
+                    </div>
+                    <br> <br>
+                    <input type="checkbox" name="news" id="news">
+                    <label for="news">Also subscribe to the newsletter for latest updates.</label>
+                    <br> <br>
+                </div>
+                <div>
+                    <p>By clicking on Sign Up, you agree to the <u><a href="terms.html">Terms and Conditions</a></u> of Pakify.</p>
+                </div>
+                <div>
+                    <center>
+                    <button>Sign Up</button>
+                    </center>
+                    <br>
+                    <br>
+                    <hr>
+                </div>
+            </form>
+            <p> Already have an account? <u><a href="{{ url_for('auth.signup') }}">Log in</a>.</u></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="links">
+            <div class="social1">
+                <div>
+                    <ul>
+                        <li><a href="{{ url_for('views.index') }}">HOME</a></li>
+                        <li><a href="">ARTISTS</a></li>
+                        <li><a href="{{ url_for('views.albums') }}">ALBUMS</a></li>
+                        <li><a href="">PLAYLISTS</a></li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <p>© COPYRIGHT 2023 PAKIFY MUSIC ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="social2">
+                <img src="{{ url_for('static', filename='images/icons/facebook.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/icons/instagram.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/icons/twitter.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/icons/website.png') }}" alt="">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

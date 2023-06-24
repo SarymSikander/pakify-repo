@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icons/logo.png') }}" type="image/x-icon">
+    <title>Pakify | Music</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="{{ url_for('views.index') }}"><h1>PAKIFY</h1></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('views.index') }}">Home</a></li>
+                <li><a href="">Artists</a></li>
+                <li><a href="{{ url_for('views.albums') }}">Albums</a></li>
+                <li><a href="">Playlists</a></li>
+                <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="form">
+            <div>
+                <h1>Log In to Pakify</h1>
+            </div>
+            <form action="{{ url_for('auth.login') }}" method="post">
+                <div>
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" placeholder="Username" id="username" name="username">
+                    <br> <br>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" placeholder="Password" id="password" name="password">
+                </div>
+                <div>
+                    <center>
+                    <button type="submit">Log In</button>
+                    </center>
+                    <br>
+                    <br>
+                    <hr>
+                </div>
+            </form>
+            <p> Don't have an account? <u><a href="{{ url_for('auth.signup') }}">Sign Up for Pakify</a></u></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="links">
+            <div class="social1">
+                <div>
+                    <ul>
+                        <li><a href="{{ url_for('views.index') }}">HOME</a></li>
+                        <li><a href="">ARTISTS</a></li>
+                        <li><a href="{{ url_for('views.albums') }}">ALBUMS</a></li>
+                        <li><a href="">PLAYLISTS</a></li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <p>© COPYRIGHT 2023 PAKIFY MUSIC ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="social2">
+                <img src="{{ url_for('static', filename='images/icons/facebook.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/icons/instagram.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/icons/twitter.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/icons/website.png') }}" alt="">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

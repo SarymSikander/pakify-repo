@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/*------------------------------------------------ Constants ----------------------------------------------------*/
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6200;
+}
+
+button {
+    width: 30vh;
+    height: 5vh;
+    background-color: silver;
+    color: #262625;
+    border-radius: 5px;
+    border: 0.1px solid silver;
+}
+
+button:hover {
+    background-color: #ff6200;
+    border: 0.1px solid #ff6200;
+    color: #262625;
+    transition: 0.2s ease-in;
+}
+
+/*------------------------------------------------ Navigation Bar ----------------------------------------------------*/
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #262625;
+    position: fixed;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.logo {
+    width: 80%;
+    margin: 20px;
+    margin-left: 10%;
+    background-color: #262625;
+}
+
+.menu {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: #262625;
+}
+
+.menu > ul {
+    width: 100%;
+    list-style: none;
+    display: inline-flex;
+    padding: 10px;
+    background-color: #262625;
+}
+
+.menu > ul > li {
+    margin: 5%;
+    width: 20%;
+}
+
+.menu>ul>button {
+    background-color: #ff6200;
+    width: 40%;
+    border: 0.2px solid #ff6200;
+    border-radius: 20px;
+}
+
+.menu>ul>button:hover {
+    background-color: transparent;
+    width: 40%;
+    color: #ff6200;
+}
+
+.menu>ul>li>a:hover {
+    color: #ff6200;
+    transition: 0.1s ease-in;
+    border-bottom: 1px solid #ff6200;
+}
+
+/*------------------------------------------------ Header Area ----------------------------------------------------*/
+
+
+
+
+
+/*------------------------------------------------ Main Area ------------------------------------------------------*/
+
+main {
+    display: flex;
+}
+
+section {
+    width: 80%;
+    height: 220vh;
+    background-color: black;
+}
+
+.playlists {
+    width: 100%;
+    background-color: black;
+    margin-top: 8%;
+}
+
+.playlist {
+    width: 100%;
+    height: 25%;
+}
+
+.playlist-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btndiv {
+    width: 30%;
+}
+
+.playlist-title > div {
+    width: 50%;
+}
+
+.playlist-title > div > h2 {
+    margin-left: 10%;
+}
+
+.playlist-title > div > button {
+    width: 20%;
+    height: 5%;
+    color: silver;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0px;
+    margin-right: 10px;
+}
+
+.playlist-title>div>button:hover {
+    border-bottom: 0.1px solid white;
+    color: white;
+}
+
+.playlist-cards {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.playlist-card {
+    width: 100%;
+    height: 85%;
+    background-color: #262625;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.playlist-card:hover {
+    transition: 0.1s ease-in;
+    transform: scale(1.05);
+    background-color: #3d3d3b;
+}
+
+.playlist-img {
+    width: 95%;
+    height: 60%;
+    position: relative;
+}
+
+.cardimg {
+    width: 100%;
+    height: 90%;
+    border-radius: 8px;
+    z-index: 1;
+    position: absolute;
+}
+
+.playbtn {
+    width: 30%;
+    height: 32%;
+    z-index: 2;
+    position: absolute;
+    top: 55%;
+    left: 68%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.playlist-card:hover .hidden{
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.playlist-disc {
+    text-align: justify;
+}
+
+aside {
+    width: 20%;
+    height: 100vh;
+    background-color: #262625;
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    transform: translateX(-50%);
+}
+
+.sider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sider > ul {
+    margin: 10%;
+}
+
+.sider > ul > li  {
+    width: 100%;
+    height: 25%;
+    margin: 15%;
+    font-size: large;
+}
+
+/*------------------------------------------------ Footer Area ----------------------------------------------------*/
+
+footer {
+    width: 80%;
+    height: 90vh;
+    background-color: #262625;
+}
+
+.rows {
+    background-color: black;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row-1 > ul > li {
+    margin: 7px;
+    padding: 7px;
+}
+
+.row-2 > ul > li {
+    margin: 7px;
+    padding: 7px;
+}
+
+.links {
+    background-color: #262625;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 0.5px solid silver;
+}
+
+.social1 > div > ul {
+    display: inline-flex;
+}
+
+.social1 > div > ul > li {
+    margin-right: 20px;
+    padding-right: 17px;
+    border-right: 0.1px solid silver;
+}
+
+.social2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social2 > img {
+    padding: 20px;
+}
